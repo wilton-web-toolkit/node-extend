@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 'use strict';
 
 var hasOwn = Object.prototype.hasOwnProperty;
@@ -84,3 +85,5 @@ module.exports = function extend() {
 	// Return the modified object
 	return target;
 };
+
+return module.exports;});

@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 'use strict';
 
-var extend = require('../index');
-var test = require('tape');
+var extend = require('extend/');
+//var test = require('tape');
 
 var str = 'me a test';
 var integer = 10;
@@ -626,3 +627,5 @@ test('non-object target', function (t) {
 
 	t.end();
 });
+
+return module.exports;});
