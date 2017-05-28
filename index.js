@@ -33,7 +33,7 @@ var isPlainObject = function isPlainObject(obj) {
 };
 
 module.exports = function extend() {
-	var options, name, src, copy, copyIsArray, clone;
+	var options, name, ke, src, copy, copyIsArray, clone;
 	var target = arguments[0];
 	var i = 1;
 	var length = arguments.length;
@@ -55,7 +55,17 @@ module.exports = function extend() {
 		// Only deal with non-null/undefined values
 		if (options != null) {
 			// Extend the base object
-			for (name in options) {
+                        var keys = [];
+                        if ("string" === typeof(options)) {
+                            options = new String(options);
+                            keys = Object.keys(options);
+                        } else {
+                            for (ke in options) {
+                                keys.push(ke);
+                            }
+                        }
+			for (var ki = 0; ki < keys.length; ki++) {
+                                name = keys[ki];
 				src = target[name];
 				copy = options[name];
 
