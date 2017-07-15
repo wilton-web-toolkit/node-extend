@@ -38,6 +38,12 @@
 		"eslint": "^3.19.0",
 		"@ljharb/eslint-config": "^11.0.0"
 	},
-	"license": "MIT"
+	"license": "MIT",
+  "wilton": {
+    "excludes": [
+      "test",
+      "component.json"
+    ]
+  }
 }
 
